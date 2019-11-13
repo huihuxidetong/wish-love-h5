@@ -1,0 +1,16 @@
+export const BASE_URL="/mobile"
+export const BANNER_LIST="/banner/list"
+export const COMMODITY_CATEGORY_LIST="/commodity_category/list"
+export const COMMODITY_CATEGORY_4INDEX_PAGE_LIST="/commodity_category/list4IndexPage"
+export const COMMODITY_LIST_4INDEX_PAGE_LIST="/commodity/list4IndexPage"
+export const USER_CART="/user_cart/getUserCart"
+export const USER_DEFAULT_ADDRESS="/user_address/getUserDefaultAddress"
+export const USER_All_ADDRESS="/user_address/getUserAllAddress"
+export const USER_ADDRESS_BY_ID="/user_address/getUserAddressById"
+export const SAVE_USER_ADDRESS="/user_address/saveUserAddress"
+export const USER_INFO="/user/getUserInfo"
+export const ORDER_LIST="/order/list"
+export const ALIYUN_IMG_URL="https://renren-ningchao.oss-cn-shanghai.aliyuncs.com/"
+export const USER_LOGIN="user/login"
+
+
