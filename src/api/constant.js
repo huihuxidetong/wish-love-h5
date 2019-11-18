@@ -1,0 +1,1 @@
+export const TYPE_CODE_COMMODITY_UNIT="100000";

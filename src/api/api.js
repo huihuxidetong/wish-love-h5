@@ -2,51 +2,102 @@ import axiosIns from './axios-ins'
 import axiosForm from './axios-form'
 import * as url from './url'
 
-export function getBannerList() {
-    return axiosForm.post(url.BANNER_LIST);
+export function logout() {
+  return axiosIns.get(url.LOG_OUT);
 }
 
-export function getCommodityCategoryList4IndexPageList(json) {
-    return axiosIns.post(url.COMMODITY_CATEGORY_4INDEX_PAGE_LIST,json);
+export function login(user) {
+  return axiosForm.post(url.LOGIN,user);
+}
+export function isOnline() {
+  return axiosIns.get(url.IS_ONLINE);
 }
 
-export function getCommoditylist4IndexPageList(json) {
-    return axiosIns.post(url.COMMODITY_LIST_4INDEX_PAGE_LIST,json);
+export function getUserList(json) {
+  return axiosIns.post(url.GET_USER_LIST,json);
 }
 
-export function getCommodityCategoryList(json) {
-    return axiosIns.post(url.COMMODITY_CATEGORY_LIST,json);
+export function getUserMessage(json) {
+  return axiosIns.post(url.GET_USER_MESSAGES,json);
 }
 
-export function getUserCart(json) {
-    return axiosIns.post(url.USER_CART,json);
+export function getMessage(userId,otherUserId,time,json) {
+  return axiosIns.post(url.GET_MESSAGES+"/"+userId+"/"+otherUserId+"/"+time,json);
 }
 
-export function getUserDefaultAddress(json) {
-    return axiosIns.post(url.USER_DEFAULT_ADDRESS,json);
+
+export function getEssay(json) {
+  return axiosIns.post(url.GET_ESSAY,json);
 }
 
-export function getUserAllAddress(json) {
-    return axiosIns.post(url.USER_All_ADDRESS,json);
+
+export function getCommentByEssayId(id,json) {
+  return axiosIns.post(url.GET_ESSAY_COMMENT+id,json);
 }
 
-export function getUserAddressById(json) {
-    return axiosIns.post(url.USER_ADDRESS_BY_ID,json);
+export function getEmployeeList(json) {
+  return axiosIns.post(url.GET_EMPLOYEE_LIST,json);
 }
 
-export function saveUserAddress(json) {
-    return axiosIns.post(url.SAVE_USER_ADDRESS,json);
+export function saveUpdateEmployee(json) {
+  return axiosIns.post(url.SAVE_UPDATE_EMPLOYEE,json);
 }
 
-export function getUserInfo(json) {
-    return axiosIns.post(url.USER_INFO,json);
+
+export function getRoleList(json) {
+  return axiosIns.post(url.GET_ROLE_LIST,json);
 }
 
-export function getOrderList(json) {
-    return axiosIns.post(url.ORDER_LIST,json);
+export function saveUpdateRole(json) {
+  return axiosIns.post(url.SAVE_UPDATE_ROLE,json);
 }
 
-export function userLogin(json) {
-    return axiosIns.post(url.USER_LOGIN,json);
+export function roleDelete(id) {
+  return axiosIns.get(url.ROLE_DELETE+id);
 }
+
+export function employeeDelete(id) {
+  return axiosIns.get(url.EMPLOYEE_DELETE+id);
+}
+
+export function employeeAssignRole(json) {
+  return axiosIns.post(url.EMPLOYEE_ASSIGN_ROLE,json);
+}
+
+export function permissionList() {
+  return axiosIns.get(url.PERMISSION_LIST);
+}
+
+export function assignPerm(json) {
+  return axiosIns.post(url.ASSIGN_PERM,json);
+}
+
+export function getCommodityList(json) {
+  return axiosIns.post(url.GET_COMMODITY_LIST,json);
+}
+
+export function saveUpdateCommodity(json) {
+  return axiosIns.post(url.SAVE_UPDATE_COMMODITY,json);
+}
+
+export function commodityDelete(id) {
+  return axiosIns.get(url.COMMODITY_DELETE+id);
+}
+
+export function getDictionaryList(json) {
+  return axiosIns.post(url.DICTIONARY_LIST,json);
+}
+
+export function queryBannerList(json) {
+  return axiosIns.post(url.BANNER_LIST,json);
+}
+
+export function saveUpdateBanner(json) {
+  return axiosIns.post(url.SAVE_UPDATE_BANNER,json);
+}
+
+export function bannerDelete(id) {
+  return axiosIns.get(url.BANNER_DELETE+id);
+}
+
 
